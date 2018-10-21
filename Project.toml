@@ -1,0 +1,8 @@
+name = "GrammianAngularFields"
+uuid = "ca0b46b0-d4b5-11e8-061e-5d8e00d5eada"
+authors = ["Michael Green <micke.green@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+PlotlyJS = "f0f68f2c-4968-5e81-91da-67840de0976a"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
