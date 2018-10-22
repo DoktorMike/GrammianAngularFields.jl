@@ -1,0 +1,4 @@
+using Documenter, GrammianAngularFields
+
+makedocs()
+
