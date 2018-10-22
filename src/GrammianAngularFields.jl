@@ -77,4 +77,27 @@ julia> plotgrammian(grammify(1:10))
 """
 plotgrammian(g) = PlotlyJS.plot(PlotlyJS.heatmap(z=g))
 
+"""
+    plotgrammian2(x)
+
+# Examples
+```jldoctest
+julia> plotgrammian2(sin.(1:30))
+```
+"""
+function plotgrammian2(x::AbstractVector)
+    p1 = PlotlyJS.plot(PlotlyJS.scatter(x=1:length(x), y=x))
+    p2 = PlotlyJS.plot(PlotlyJS.heatmap(z=grammify(x)))
+    p = [p1 p2]
+    p
+end
+
+function testme(x::AbstractVector)
+    p1 = PlotlyJS.plot(PlotlyJS.scatter(x=1:length(x), y=x))
+    #p3 = PlotlyJS.plot(PlotlyJS.scatter(x=1:length(x), y=x .+ 3))
+    p2 = PlotlyJS.plot(PlotlyJS.heatmap(z=grammify(x)))
+    p = [p1 p2]
+    p
+end
+
 end # module
