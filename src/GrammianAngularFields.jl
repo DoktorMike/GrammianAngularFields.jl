@@ -94,7 +94,6 @@ end
 
 function testme(x::AbstractVector)
     p1 = PlotlyJS.plot(PlotlyJS.scatter(x=1:length(x), y=x))
-    #p3 = PlotlyJS.plot(PlotlyJS.scatter(x=1:length(x), y=x .+ 3))
     p2 = PlotlyJS.plot(PlotlyJS.heatmap(z=grammify(x)))
     p = [p1 p2]
     p
