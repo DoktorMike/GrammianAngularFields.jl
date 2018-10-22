@@ -3,6 +3,18 @@
     normalize(x)
 
 Transforms a univariate array into a 0 mean and unit standard deviation array.
+
+# Examples
+
+```jldoctest
+julia> GrammianAngularFields.normalize(collect(1:5))
+5-element Array{Float64,1}:
+ -1.2649110640673518
+ -0.6324555320336759
+  0.0               
+  0.6324555320336759
+  1.2649110640673518
+```
 """
 function normalize(x::AbstractVector)
     m = StatsBase.mean(x)

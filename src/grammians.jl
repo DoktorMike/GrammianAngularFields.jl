@@ -26,7 +26,12 @@ Plot a grammified univariate array.
 
 # Examples
 ```jldoctest
-julia> plotgrammian(grammify(1:10))
+julia> GrammianAngularFields.plotgrammian(grammify(1:10))
+data: [
+  "heatmap with fields type and z"
+]
+
+layout: "layout with field margin"
 ```
 """
 plotgrammian(g) = PlotlyJS.plot(PlotlyJS.heatmap(z=g))
@@ -36,7 +41,13 @@ plotgrammian(g) = PlotlyJS.plot(PlotlyJS.heatmap(z=g))
 
 # Examples
 ```jldoctest
-julia> plotgrammian2(sin.(1:30))
+julia> GrammianAngularFields.plotgrammian2(sin.(1:30))
+data: [
+  "scatter with fields type, x, xaxis, y, and yaxis",
+  "heatmap with fields type, xaxis, yaxis, and z"
+]
+
+layout: "layout with fields margin, xaxis1, xaxis2, yaxis1, and yaxis2"
 ```
 """
 function plotgrammian2(x::AbstractVector)

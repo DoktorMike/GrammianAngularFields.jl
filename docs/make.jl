@@ -1,4 +1,6 @@
+push!(LOAD_PATH,"../src/")
+
 using Documenter, GrammianAngularFields
 
-makedocs()
+makedocs(sitename="Grammian Angular Fields Documentation")
 
