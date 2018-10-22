@@ -12,6 +12,8 @@ module GrammianAngularFields
 import StatsBase
 import PlotlyJS
 
+export grammify
+
 greet() = print("This is Grammian Angular Fields!")
 
 """
@@ -92,6 +94,18 @@ function plotgrammian2(x::AbstractVector)
     p
 end
 
+"""
+    testme(x)
+
+Test any kind of functionality which may change at any time.
+This is indeed the very definition of a random function.
+
+# Examples
+```jldoctest
+julia> foo = 42
+42
+```
+"""
 function testme(x::AbstractVector)
     p1 = PlotlyJS.plot(PlotlyJS.scatter(x=1:length(x), y=x))
     p2 = PlotlyJS.plot(PlotlyJS.heatmap(z=grammify(x)))
