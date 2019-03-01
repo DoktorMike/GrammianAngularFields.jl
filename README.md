@@ -6,3 +6,17 @@
 
 A small package that converts a univariate array into a Grammian Angular Field.
 
+The usage is super simple and the code
+
+```julia
+grammify(1:4)
+```
+
+produces
+
+>4×4 Array{Float64,2}:
+>  1.0        0.333333  -0.333333  -1.0     
+>  0.333333  -0.777778  -1.0       -0.333333
+> -0.333333  -1.0       -0.777778   0.333333
+> -1.0       -0.333333   0.333333   1.0  
+
